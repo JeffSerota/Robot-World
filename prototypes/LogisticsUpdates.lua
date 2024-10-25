@@ -98,8 +98,8 @@ local enable_early_recipes=function()
   if mods["recursive-blueprints"] then
     enableRecipes("blueprint-deployer")
     replaceIngredient("blueprint-deployer", {
-      {"iron-chest", 3},
-      {"electronic-circuit", 1}
+      {type = "item", name = "iron-chest", amount = 3},
+      {type = "item", name = "electronic-circuit", amount = 1},
     })
     for i, v in pairs(data.raw["technology"]["circuit-network"]["effects"]) do
       enableRecipes(v.recipe)
@@ -118,18 +118,18 @@ function early_recipe_updates()
     return
   end
   robot_ingredient = {
-    {"iron-plate", 1},
-    {"iron-gear-wheel", 1},
-    {"electronic-circuit", 1},
+    {type = "item", name = "iron-plate", amount = 1},
+    {type = "item", name = "iron-gear-wheel", amount = 1},
+    {type = "item", name = "electronic-circuit", amount = 1}
   }
   chest_ingredient = {
-    {"iron-plate", 3},
-    {"electronic-circuit", 1},
+    {type = "item", name = "iron-plate", amount = 3},
+    {type = "item", name = "electronic-circuit", amount = 1}
   }
   roboport_ingredient = {
-    {"iron-plate", 25},
-    {"iron-gear-wheel", 10},
-    {"electronic-circuit", 10}
+    {type = "item", name = "iron-plate", amount = 25},
+    {type = "item", name = "iron-gear-wheel", amount = 10},
+    {type = "item", name = "electronic-circuit", amount = 10}
   }
   -- Changes cost of recipes
   if settings.startup["enable-early-logistic-robots"].value then
