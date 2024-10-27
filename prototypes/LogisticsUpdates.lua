@@ -69,6 +69,7 @@ local early_energy_updates=function()
     end
     v.logistics_radius = logistics_rad * settings.startup["roboport-logistics-radius-multiplier"].value
     v.construction_radius = construction_rad * settings.startup["roboport-construction-radius-multiplier"].value
+    v.radar_range = 0
     ::continue::
   end
 end
